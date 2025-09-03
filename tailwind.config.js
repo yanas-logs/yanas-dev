@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",        // All App Router
+    "./app/**/*.{js,ts,jsx,tsx}", // All App Router
     "./components/**/*.{js,ts,jsx,tsx}", // All Component
-    "./lib/**/*.{js,ts,jsx,tsx}"         // Library
+    "./lib/**/*.{js,ts,jsx,tsx}", // Library
   ],
   theme: {
     extend: {
@@ -42,10 +42,8 @@ module.exports = {
 
         // branding / accent
         primary: "#1c1c22",
-        accentNeon: {
-          accentNeon: "var(--accent-neon)",
-          "accentNeon-hover": "var(--accent-neon)",
-        },
+        accentNeon: "var(--accent-neon)",
+        accentNeonHover: "var(--accent-neon-hover)",
       },
       fontFamily: {
         primary: "var(--font-primary)",
