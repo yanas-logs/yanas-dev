@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+
+//components
 import Navbar from "./Navbar";
+import MobileNav from "./MobileNav";
 
 
 const Header = () => {
@@ -25,8 +28,10 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* desktop nav */}
-        <div className="xl:flex"></div>
+        {/* mobile nav */}
+        <div className="xl:flex">
+          <MobileNav/>
+        </div>
       </div>
     </header>
   );
