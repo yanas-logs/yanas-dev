@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12 text-white">
+    <header className="py-8 xl:py-12 text-white relative z-50">
       <div className="container mx-auto flex justify-between items-center ">
         {/* logo */}
         <Link href={"/"}>
