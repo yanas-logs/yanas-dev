@@ -1,3 +1,4 @@
+import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
@@ -32,13 +33,20 @@ const Home = () => {
               <FiDownload className="text-xl" />
             </Button>
             <div className="mb-8 xl:mb-0">
-              <Social />
+              <Social
+                containerStyle="flex gap-6"
+                iconStyle="w-9 h-9 border border-accentNeon rounded-full flex justify-center 
+                items-center text-accentNeon text-base hover:bg-accentNeon hover:text-primary 
+                transition-all duration-500"
+              />
             </div>
           </div>
         </div>
 
         {/* photo */}
-        <div>Photo</div>
+        <div>
+          <Photo/>
+        </div>
       </div>
     </section>
   );
