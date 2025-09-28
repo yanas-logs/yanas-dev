@@ -96,6 +96,8 @@
   --muted-foreground: oklch(0.704 0.04 256.788);
   --accent: oklch(0.279 0.041 260.031);
   --accent-foreground: oklch(0.984 0.003 247.858);
+  --accent-neon: oklch(0.8791 0.2134 155.95);
+  --accent-neon-hover: oklch(0.7999 0.1936 156.11);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(0.8791 0.2134 155.95);
   --input: oklch(1 0 0 / 15%);
@@ -122,10 +124,36 @@
   body {
     @apply bg-primary leading-loose font-primary text-white;
   }
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
   .text-accentNeon {
     color: var(--accent-neon);
   }
   .text-accentNeon:hover {
     color: var(--accent-neon-hover);
   }
+   .bg-accentNeon {
+    background-color: var(--accent-neon);
+  }
+  .bg-accentNeon:hover {
+    background-color: var(--accent-neon-hover);
+  }
+  .text-outline {
+  -webkit-text-stroke: 1px #ffffff;
+  }
+
+
+  .text-outline-hover {
+  -webkit-text-stroke: 1px #00ff99;
+  }
+
+  
 }
+

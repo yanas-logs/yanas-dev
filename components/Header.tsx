@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+
+//components
 import Navbar from "./Navbar";
+import MobileNav from "./MobileNav";
 
 
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12 text-white">
+    <header className="py-8 xl:py-12 text-white relative z-50">
       <div className="container mx-auto flex justify-between items-center ">
         {/* logo */}
         <Link href={"/"}>
@@ -25,8 +28,10 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* desktop nav */}
-        <div className="xl:flex"></div>
+        {/* mobile nav */}
+        <div className="xl:flex">
+          <MobileNav/>
+        </div>
       </div>
     </header>
   );
