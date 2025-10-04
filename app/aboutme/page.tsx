@@ -179,10 +179,10 @@ const AboutMe = () => {
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">                              
-                                <div className="text-6xl group-hover:text-accentNeon transition-all duration-300">
-                                  {skill.icon}
-                                </div>                              
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <div className="text-6xl group-hover:text-accentNeon transition-all duration-300">
+                                {skill.icon}
+                              </div>
                             </TooltipTrigger>
                             <TooltipContent>
                               <p className="capitalize">{skill.name}</p>
@@ -197,11 +197,30 @@ const AboutMe = () => {
             </TabsContent>
 
             <TabsContent value="about" className="w-full text-center xl:text-left">
-              <div>
-                <h3>{about.title}</h3>
-                <p>{about.description}</p>
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center gap-4 justify-center xl:justify-start"
+                      >
+                        <span className="text-white/60 flex-shrink-0 whitespace-nowrap">
+                          {item.fieldName}
+                        </span>
+                        <span className="text-xl whitespace-nowrap">{item.fieldValue}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+
               </div>
             </TabsContent>
+            
           </div>
         </Tabs>
       </div>
