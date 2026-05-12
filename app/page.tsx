@@ -12,7 +12,7 @@ const Home = () => {
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          
+
           {/* text + button + socials */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Software Engineer</span>
@@ -28,14 +28,19 @@ const Home = () => {
 
             {/* Button and Socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
+              <a
+                href="/cv.pdf"
+                download
               >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Download CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyle="flex gap-6"
@@ -53,7 +58,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Stats/>
+      <Stats />
     </section>
   );
 };
